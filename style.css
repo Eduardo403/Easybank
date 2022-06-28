@@ -1,0 +1,235 @@
+/*******Custom Propite******/
+:root {
+  --Dark-Blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+
+  --Grayish-Blue: hsl(233, 8%, 62%);
+  --Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  --translate-filters-slider: 0;
+  --filters-container-height: 3.8rem;
+  --filters-wrapper-opacity: 1;
+  --font-size: 18px;
+  --font: "Public Sans" "sans-serif";
+  --max-whit: 1440px;
+}
+
+/*******Reset********/
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--Grayish-Blue);
+  transition: all 0.5s ease-out;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+h6 {
+  margin: 0;
+  font-size: 0.5rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  line-height: 1.6;
+}
+
+/*****Componentes*****/
+/******Hero-img*******/
+.hero-img {
+  background-repeat: no-repeat;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-img-opaciti {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--black-alhfa-color);
+}
+.hero-title {
+  color: var(--white);
+  font-size: 7vw;
+}
+.hero-img-content img {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+}
+
+/********menu-header*********/
+.menu-btn {
+  outline: thin solid var(--blue-A700);
+  border: 0;
+  cursor: pointer;
+  background-color: var(--White);
+}
+.menu-btn svg {
+  fill: var(--Grayish-Blue);
+}
+.menu-header {
+  position: fixed;
+  left: 0;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--White);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.menu-header.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.menu-header a {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  color: var(--Dark-Blue);
+}
+.menu-header a :hover {
+  color: var(--White);
+  background-color: var(--Dark-Blue);
+}
+/*******Utilites******/
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+.btn {
+  border-radius: 1rem;
+  font-size: 18px;
+  padding: 1rem;
+  height: 1.5em;
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--Dark-Blue);
+  background-color: var(--Light-Grayish-Blue);
+}
+.conteiner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-whit);
+}
+
+.none {
+  display: none;
+}
+
+/*******syte site*******/
+.header-ladig-page {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  height: 4rem;
+  background-color: var(--White);
+  z-index: 999;
+}
+.header-ladig-page > .conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.teg-domain {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.teg-domain img {
+  width: 3rem;
+  height: auto;
+  margin: 1rem;
+}
+.teg-domain p {
+  font-size: 24px;
+}
+
+.logo svg {
+  font-size: 2rem;
+
+  margin: 1rem;
+}
+@media screen and (min-width: 780px) {
+}
+@media screen and (min-width: 1024px) {
+  .header-ladig-page {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    height: calc(4rem-0.5rem);
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-header {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu-header a {
+    padding: 0 1rem;
+  }
+  .menu-header a:last-child {
+    padding-right: 0;
+  }
+  .menu-header a:hover {
+    background-color: transparent;
+  }
+}
