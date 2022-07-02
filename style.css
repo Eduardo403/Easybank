@@ -77,35 +77,25 @@ p {
 
 /*****Componentes*****/
 /******Hero-img*******/
-.hero-img {
+.hero-img-dee {
   background-repeat: no-repeat;
-  background-image: var(--img);
+  background-image: url("./images/bg-intro-mobile.svg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-.hero-img-opaciti {
+.hero-img-insa {
   display: flex;
   width: 100%;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--black-alhfa-color);
-}
-.hero-title {
-  color: var(--white);
-  font-size: 7vw;
-}
-.hero-img-content img {
-  width: 35%;
-  height: 35%;
-  border-radius: 50%;
 }
 
 /********menu-header*********/
 .menu-btn {
-  outline: thin solid var(--blue-A700);
+  outline: thin solid var(--white);
   border: 0;
   cursor: pointer;
   background-color: var(--White);
@@ -115,7 +105,7 @@ p {
 }
 .menu-header {
   position: fixed;
-  left: 0;
+
   top: 4rem;
   display: flex;
   flex-direction: column;
@@ -124,6 +114,7 @@ p {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
+  margin: 1rem;
 }
 .menu-header.is-active {
   opacity: 1;
@@ -136,33 +127,55 @@ p {
   text-align: center;
   text-decoration: none;
 
-  color: var(--Dark-Blue);
+  color: var(--Grayish-Blue);
 }
-.menu-header a :hover {
-  color: var(--White);
-  background-color: var(--Dark-Blue);
+.menu-header a:hover {
+  color: var(--Dark-Blue);
+  background-color: var(--Grayish-Blue);
 }
 /*******Utilites******/
 .box-shadow-1 {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
-.btn {
-  border-radius: 1rem;
+.btn-invite {
+  border-radius: 1.5rem;
   font-size: 18px;
-  padding: 1rem;
-  height: 1.5em;
-  display: inline-block;
-  width: 150px;
+  padding: 0.4rem;
+  display: none;
+  width: 180px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  color: var(--Dark-Blue);
-  background-color: var(--Light-Grayish-Blue);
+  color: var(--White);
+  background-color: var(--Lime-Green);
+  padding-left: 00.4rem;
 }
+.btn-invite:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.btn-invite-home {
+  border-radius: 1.5rem;
+  font-size: 18px;
+  padding: 0.4rem;
+  display: inline-block;
+  width: 180px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--White);
+  background-color: var(--Lime-Green);
+  padding-left: 00.4rem;
+}
+.btn-invite-home:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .conteiner {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--max-whit);
+  max-width: 1440px;
 }
 
 .none {
@@ -185,6 +198,19 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.home-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  text-align: center;
+  align-items: center;
+}
+.home-text h1 {
+  color: var(--Dark-Blue);
+}
+.home-text p {
+  color: var(--Grayish-Blue);
+}
 .teg-domain {
   display: flex;
   text-align: center;
@@ -204,6 +230,7 @@ p {
 
   margin: 1rem;
 }
+
 @media screen and (min-width: 780px) {
 }
 @media screen and (min-width: 1024px) {
@@ -231,5 +258,26 @@ p {
   }
   .menu-header a:hover {
     background-color: transparent;
+  }
+  .btn-invite {
+    display: inline-block;
+  }
+  .abaut {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .home-text {
+    margin: 4rem 0 0 2rem;
+    width: 45%;
+  }
+  .hero-img-dee {
+    background-image: url("./images/bg-intro-desktop.svg");
+    margin: 0 2rem;
+    transform: scaleX(-1);
+  }
+  .hero-img-insa {
+    transform: scaleX(-1);
+    margin-bottom: 0;
+    margin-top: 1rem;
   }
 }
