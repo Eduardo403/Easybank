@@ -265,6 +265,8 @@ p {
   .abaut {
     display: flex;
     flex-direction: row-reverse;
+    width: 100%;
+    margin: 0 1rem;
   }
   .home-text {
     margin: 4rem 0 0 2rem;
@@ -273,6 +275,7 @@ p {
   .hero-img-dee {
     background-image: url("./images/bg-intro-desktop.svg");
     margin: 0 2rem;
+    background-position: right;
     transform: scaleX(-1);
   }
   .hero-img-insa {
