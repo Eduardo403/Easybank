@@ -89,8 +89,6 @@ p {
   width: 100%;
   min-height: 100vh;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 /********menu-header*********/
@@ -183,6 +181,36 @@ p {
 }
 
 /*******syte site*******/
+.abaut {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 2rem;
+  padding: 1rem;
+}
+.abaut h2,
+h3 {
+  color: var(--Dark-Blue);
+}
+.abaut p {
+  color: var(--Grayish-Blue);
+}
+.abaut-text {
+  margin: 0.3rem auto;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+.abaut-text svg {
+  margin: 0.7rem auto;
+}
+.abaut-text h3 {
+  margin: 0.7rem auto;
+}
+
 .header-ladig-page {
   position: fixed;
   left: 0;
@@ -201,7 +229,9 @@ p {
 .home-text {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  margin: 3rem 4rem 8rem 4rem;
+
+  justify-content: center;
   text-align: center;
   align-items: center;
 }
@@ -234,6 +264,27 @@ p {
 @media screen and (min-width: 780px) {
 }
 @media screen and (min-width: 1024px) {
+  .abaut {
+    display: grid;
+    grid-row: 10px;
+    grid-template-rows: 8rem 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .abaut-title {
+    grid-column: 1/5;
+    text-align: left;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+  }
+  .abaut-title p {
+    width: 60%;
+  }
+  .abaut-text {
+    text-align: left;
+    height: 100%;
+  }
+
   .header-ladig-page {
     position: sticky;
     top: 0;
@@ -262,7 +313,7 @@ p {
   .btn-invite {
     display: inline-block;
   }
-  .abaut {
+  .home {
     display: flex;
     flex-direction: row-reverse;
     width: 100%;
