@@ -17,7 +17,7 @@ function menuHamburgesa() {
     }
 
     d.addEventListener("click", (e) => {
-      if (!e.target.matches(".menu a")) return false;
+      if (!e.target.matches(".menu-header a")) return false;
       $menu.classList.remove("is-active");
       $open.classList.remove("none");
       $close.classList.add("none");
